@@ -7,13 +7,13 @@ module.exports = {
         res.json(user)
     },
     async create(req, res){
-      const {nome_produto, tipo, valor, marca } = req.body;
+      const {modelo, tipo, foto, produto, preco } = req.body;
 
       let data = {}
 
       let user = await Produtos.findOne({nome_produto});
       if(!user){
-          data = {nome_produto, tipo, valor, marca }
+          data = {modelo, tipo, foto, produto, preco }
           user = Produtos.create(data)
           return res.status(200).json(user)
       } else {
@@ -28,9 +28,9 @@ module.exports = {
         return res.json(user);
     },
     async update(req, res){
-        const { _id, nome_produto, tipo, valor, marca } = req.body;
+        const { _id, modelo, tipo, foto, produto, preco } = req.body;
 
-        const data = {nome_produto, tipo, valor, marca};
+        const data = {modelo, tipo, foto, produto, preco};
 
         const user = await Produtos.findByIdAndUpdate({_id}, data, {new: true})
 
