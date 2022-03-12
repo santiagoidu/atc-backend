@@ -1,10 +1,11 @@
 const mongoose = require('mongoose')
 
 const DataSchema = new mongoose.Schema({
-    nome_produto: String,
+    modelo: String,
     tipo: String,
-    valor: String,
-    marca: String,
+    foto: File,
+    produto: String,
+    preco: String
 },{
     timestamps: true
 })
