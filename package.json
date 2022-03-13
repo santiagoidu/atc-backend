@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "serve -s build"
   },
   "author": "idu softwares",
   "license": "ISC",
@@ -15,7 +16,8 @@
     "cors": "^2.8.5",
     "express": "^4.17.3",
     "mongoose": "^6.2.3",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "server": "^1.0.37"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
